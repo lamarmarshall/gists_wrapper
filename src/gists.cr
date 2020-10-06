@@ -1,7 +1,7 @@
 # TODO: Write documentation for `Gists`
 require "http/client"
 require "json"
-
+require "./token"
 module Gists
   VERSION = "0.1.0"
 	extend self
@@ -11,7 +11,7 @@ module Gists
 	# host url without protocol
 	HOST = "api.github.com"
 	#your private or OAuth token from github
-	TOKEN = "a47a8b26a1ea80a751ea5aea2c1cc880fe28130f"
+	TOKEN = GITHUB_TOKEN 
   
   #helper function that accepts the ACTION of the api
   # Gists.fetch gists/:id
